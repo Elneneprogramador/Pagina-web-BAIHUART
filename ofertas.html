@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BAIHUART – Ofertas</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar" id="ofertas-topbar">
+    Envío gratis por compras superiores a $250.000
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><span class="logo-text">BAIHUART</span></a>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" id="nav-tienda">Tienda</a></li>
+          <li><a href="galeria.html" id="nav-galeria">Galería</a></li>
+          <li><a href="ofertas.html" class="active" id="nav-ofertas">Ofertas</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          class="search-input"
+          id="buscar-ofertas"
+          placeholder="Buscar ofertas…"
+        />
+      </div>
+      <div class="icon-group">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <select id="selector-idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+          </select>
+        </div>
+        <a href="login.html" class="user-link">
+          <i class="fas fa-user"></i>
+          <span id="nombreUsuarioHeader"></span>
+        </a>
+        <button onclick="cerrarSesion()" class="hero-btn" id="btn-logout" style="display:none;">
+          Cerrar Sesión
+        </button>
+        <a href="carrito.html" class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Ofertas -->
+  <section class="hero hero-ofertas">
+    <div class="hero-content">
+      <h1 class="hero-title" id="ofertas-titulo">OFERTAS ESPECIALES</h1>
+    </div>
+  </section>
+
+  <!-- Sección de Ofertas -->
+  <section class="gallery-section">
+    <h2 id="ofertas-subtitulo">Ofertas Especiales 🔥</h2>
+
+    <div class="gallery-grid">
+      <!-- Oferta 1 -->
+      <div class="gallery-item">
+        <img src="img/camiseta1.jpg" alt="Pack: Camiseta + Sticker">
+        <figcaption>
+          <span id="oferta1-text">Pack: Camiseta + Sticker</span><br/>
+          <span class="old-price" id="oferta1-old">$40.000</span>
+          <span class="price" id="oferta1-new">$25.000</span><br/>
+          <button
+            class="hero-btn"
+            onclick="agregarAlCarrito('Pack Camiseta + Sticker', this.closest('.gallery-item').querySelector('img').src, 25000)"
+            id="oferta1-btn"
+          >Agregar al carrito</button>
+        </figcaption>
+      </div>
+
+      <!-- Oferta 2 -->
+      <div class="gallery-item">
+        <img src="img/phonecase1.jpg" alt="Pack: Poster + Sticker Pack ">
+        <figcaption>
+          <span id="oferta2-text">Pack: Poster + Sticker Pack </span><br/>
+          <span class="old-price" id="oferta2-old">$50.000</span>
+          <span class="price" id="oferta2-new">$45.000</span><br/>
+          <button
+            class="hero-btn"
+            onclick="agregarAlCarrito('Pack Case + Stickers', this.closest('.gallery-item').querySelector('img').src, 45000)"
+            id="oferta2-btn"
+          >Agregar al carrito</button>
+        </figcaption>
+      </div>
+
+      <!-- Oferta 3 -->
+      <div class="gallery-item">
+        <img src="img/hoodie1.jpg" alt="Pack: Hoodie + Poster + Sticker">
+        <figcaption>
+          <span id="oferta3-text">Pack: Hoodie + Poster + Sticker</span><br/>
+          <span class="old-price" id="oferta3-old">$145.000</span>
+          <span class="price" id="oferta3-new">$115.000</span><br/>
+          <button
+            class="hero-btn"
+            onclick="agregarAlCarrito('Pack Hoodie + Sticker', this.closest('.gallery-item').querySelector('img').src, 115000)"
+            id="oferta3-btn"
+          >Agregar al carrito</button>
+        </figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script global -->
+  <script src="script.js" defer></script>
+  <script>
+    // Traducción de Ofertas
+    document.addEventListener('DOMContentLoaded', () => {
+      cambiarIdioma(localStorage.getItem('idiomaSeleccionado') || 'es');
+    });
+  </script>
+</body>
+</html>
+

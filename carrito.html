@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito – BAIHUART</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Envío gratis por compras superiores a $250.000
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <div class="logo">
+        <a href="index.html"><span class="logo-text">BAIHUART</span></a>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" id="nav-tienda">Tienda</a></li>
+          <li><a href="galeria.html" id="nav-galeria">Galería</a></li>
+          <li><a href="ofertas.html" id="nav-ofertas">Ofertas</a></li>
+          <li><a href="carrito.html" class="active">Carrito</a></li>
+        </ul>
+      </nav>
+
+      <!-- Selector idioma -->
+      <div class="language-selector">
+        <i class="fas fa-globe"></i>
+        <select id="selector-idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+        </select>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Carrito -->
+  <section class="gallery-section">
+    <h2 id="titulo-carrito">Tu Carrito</h2>
+    <div id="carrito-contenido" class="gallery-grid">
+      
+      <!-- Productos llenados por JS -->
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <h3 id="total-label">Total: $<span id="total">0</span></h3>
+      <button class="hero-btn" id="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+      
+
+    </div>
+  </section>
+
+  <!-- Notificación flotante -->
+  <div id="notificacion-carrito" class="notificacion-oculta">
+    <span id="notificacion-mensaje"></span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script> 
+  
+</body>
+</html>
+
+

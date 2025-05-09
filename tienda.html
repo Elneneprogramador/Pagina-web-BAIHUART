@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BAIHUART – Tienda</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Envío gratis por compras superiores a $250.000
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html"><span class="logo-text">BAIHUART</span></a>
+      </div>
+
+      <!-- Navegación -->
+      <nav>
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="index.html" class="dropdown-toggle active">
+              Tienda
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#camisetas">Camisetas</a></li>
+              <li><a href="#stickers">Stickers</a></li>
+              <li><a href="#posters">Posters</a></li>
+              <li><a href="#phone-cases">Phone Cases</a></li>
+            </ul>
+          </li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search + Idioma + Iconos -->
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" placeholder="Buscar productos…" />
+      </div>
+
+      <div class="icon-group">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <select>
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="de">DE</option>
+            <option value="pt">PT</option>
+          </select>
+        </div>
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">TU ESTILO, TU ACTITUD</h1>
+      <a href="#productos" class="hero-btn">VER PRODUCTOS</a>
+    </div>
+  </section>
+
+  <!-- Carrusel de Productos -->
+  <section id="productos" class="product-carousel">
+    <div class="carousel-container">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel-track">
+        <!-- Tus .product-card aquí (12 items) -->
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Script global -->
+  <script defer src="script.js"></script>
+</body>
+</html>

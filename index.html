@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BAIHUART</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome GRATIS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<script>
+  function abrirLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function cerrarLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+  }
+</script>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Envío gratis por compras superiores a $250.000
+  </div>
+
+  <!-- Encabezado Principal -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#">
+          <span class="logo-text">BAIHUART</span>
+        </a>
+      </div>
+
+      <!-- Navegación -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#tienda" id="nav-tienda">Tienda</a></li>
+          <li><a href="galeria.html" id="nav-galeria">Galería</a></li>
+          <li><a href="ofertas.html" id="nav-ofertas">Ofertas</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="nav-list">
+          
+       
+          
+
+       <!--SEARCH BOX -->
+    <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          class="search-input"
+          id="barra-busqueda"
+          placeholder="Buscar productos…"
+        />
+      </div>
+
+      <!-- Iconos -->
+      <div class="icon-group">
+        
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <select id="selector-idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+          </select>
+        </div>
+        
+        <a href="login.html" class="user-link">
+          <i class="fas fa-user"></i>
+          <span id="nombreUsuarioHeader"></span>
+        </a>
+        <!-- Agrega esto si el usuario está logueado -->
+        <button onclick="cerrarSesion()" class="hero-btn" id="btn-logout" style="display:none;">Cerrar Sesión</button>
+          
+          <a href="carrito.html" class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title" id="hero-titulo">Arte que cobra vida. Estilo que deja huella.</h1>
+    </div>
+  </section>
+
+
+  <!-- Carrusel de Productos -->
+
+
+<!-- Sección: Camisetas -->
+<section id="camisetas" class="category-section">
+  <h2>Camisetas</h2>
+  <div class="gallery-grid">
+    <div class="product-card">
+      <img src="./1.jpg" alt="VI brawler">
+      <h3>Camiseta VI brawler</h3>
+      <p class="price">$ 50.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Camiseta VI brawler', '1.jpg', 50000)">Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./2.jpg" alt="Tigre blanco">
+      <h3>Camiseta Tigre blanco</h3>
+      <p class="price">$ 50.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Camiseta Tigre blanco', '2.jpg', 50000)">Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./3.jpg" alt="Dragon azul">
+      <h3>Camiseta Dragon azul</h3>
+      <p class="price">$ 50.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Camiseta Dragon azul', '3.jpg', 50000)">Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./4.jpg" alt="Cobra amarilla">
+      <h3>Camiseta Cobra amarilla</h3>
+      <p class="price">$ 50.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Camiseta Cobra amarilla', '4.jpg', 50000)">Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./5.png" alt="Yugioh">
+      <h3>Camiseta Yugioh</h3>
+      <p class="price">$ 50.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Camiseta Yugioh', '5.jpg', 50000)">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Stickers -->
+<section id="stickers" class="category-section">
+  <h2>Stickers</h2>
+  <div class="gallery-grid">
+    <div class="product-card">
+      <img src="./img/stickerfenix.png" alt="Fire fenix">
+      <h3>Fire fenix</h3>
+      <p class="price">$ 5.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Fire fenix', this.closest('.product-card').querySelector('img').src,5000)">Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/dragon sticker-01.png" alt="Thunder dragon">
+      <h3>Thunder dragon</h3>
+      <p class="price">$ 5.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Thunder dragon',this.closest('.product-card').querySelector('img').src,5000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/sticker cobra.png" alt="Stone cobra">
+      <h3>Stone cobra</h3>
+      <p class="price">$ 5.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Stone cobra',this.closest('.product-card').querySelector('img').src,5000)"> Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección: Posters -->
+<section id="posters" class="category-section">
+  <h2>Posters</h2>
+  <div class="gallery-grid">
+    <div class="product-card">
+      <img src="./img/burstinatrix.png" alt="Poster 1">
+      <h3>E.Hero burstinatrix</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Burstinatrix',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/VI.png" alt="Poster 2">
+      <h3>VI brawler</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Vi brawler',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/vader.png" alt="Poster 2">
+      <h3>Star wars: Darth vader</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Darth Vader',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/Myers.png" alt="Poster 2">
+      <h3>Halloween</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Halloween',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/HEBI.png" alt="Poster 2">
+      <h3>Cobra amarilla</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Cobra amarilla',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/BAIHU.png" alt="Poster 2">
+      <h3>Tigre blanco</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Tigre blanco',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/dragonsword.png" alt="Poster 2">
+      <h3>Dragon azul</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Dragon azul',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="./img/fenix.png" alt="Poster 2">
+      <h3>Fenix rojo</h3>
+      <p class="price">$ 20.000</p>
+      <button class="hero-btn" onclick="agregarAlCarrito('Fenix rojo',this.closest('.product-card').querySelector('img').src,20000)"> Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+        <!-- 12 productos aquí -->
+
+        
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+    <!-- Sección de Comentarios -->
+  <section id="comentarios" class="comentarios">
+    <h2>Déjanos tu comentario</h2>
+    <p>Nos encantaría saber tu opinión sobre nuestro sitio web.</p>
+    
+    <!-- Formulario de comentarios -->
+    <form action="https://formspree.io/f/xkgrznae" method="POST">
+      <label for="name">Nombre:</label>
+      <input type="text" name="name" required>
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" name="email" required>
+      
+      <label for="comment">Comentario:</label>
+      <textarea name="comment" rows="5" required></textarea>
+      
+      <button type="submit">Enviar comentario</button>
+    </form>
+  </section>
+
+  <script src="script.js" defer></script>
+
+  <!-- Notificación visual -->
+<div id="notificacion-carrito" class="notificacion-oculta">
+  <span id="notificacion-mensaje"></span>
+</div>
+</body>
+</html>
+
+

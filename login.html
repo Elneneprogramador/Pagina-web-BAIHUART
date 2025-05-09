@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión – BAIHUART</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 5rem auto;
+      background: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff3223;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .login-container input::placeholder {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Envío gratis por compras superiores a $250.000
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><span class="logo-text">BAIHUART</span></a>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Tienda</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Formulario de Login -->
+  <div class="login-container">
+    <h2 id="titulo-formulario">Iniciar Sesión</h2>
+    
+    <!-- Formulario Dinámico -->
+    <div id="formulario">
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <!-- Campos adicionales para registro (ocultos inicialmente) -->
+      <div id="campos-registro" style="display: none;">
+        <input type="text" id="nombre" placeholder="Nombre" />
+        <input type="text" id="apellido" placeholder="Apellido" />
+        <input type="tel" id="telefono" placeholder="Teléfono" />
+      </div>
+      <button class="hero-btn" id="btn-accion">Entrar</button>
+    </div>
+  
+    <!-- Switch Login/Registro -->
+    <p style="margin-top:1rem; color:#ccc;">
+      <span id="texto-switch">¿No tienes cuenta?</span> 
+      <a href="#" style="color:#ff3223;" id="switch-formulario">Regístrate aquí</a>
+    </p>
+  
+    <!-- Mensaje de error -->
+    <p id="error-login" style="color: #ff3223; display: none;"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
